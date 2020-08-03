@@ -33,5 +33,11 @@ namespace DevExpressLookUpEditWinforms
                 lookUpEdit1.Properties.ValueMember = "PromotionKey";
             }
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            //it checks if any item on the lookupedit control has been selected or not
+            MessageBox.Show(lookUpEdit1.EditValue != null ? lookUpEdit1.EditValue.ToString() : "Please select a promotion", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
